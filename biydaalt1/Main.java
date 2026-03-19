@@ -78,10 +78,23 @@ class Student {
         } else if (score >= 60) {
             return "Average";
         } else {
-            return "Needs Improvement";
+            return "Less than average";
+        }
+        
+    }
+    private double calculateGPA() {
+        if (score >= 90) {
+            return 4.0;
+        } else if (score >= 80) {
+            return 3.0;
+        } else if (score >= 70) {
+            return 2.0;
+        } else if (score >= 60) {
+            return 1.0;
+        } else {
+            return 0.0;
         }
     }
-
     public void displayInfo() {
         System.out.println("------ Student Information ------");
         System.out.println("School: " + school);
@@ -89,6 +102,7 @@ class Student {
         System.out.println("Age: " + age);
         System.out.println("Department: " + department);
         System.out.println("Score: " + score);
+        System.out.println("GPA: " + calculateGPA());
         System.out.println("Bonus: " + calculateBonus());
         System.out.println("Performance: " + evaluatePerformance());
     }
