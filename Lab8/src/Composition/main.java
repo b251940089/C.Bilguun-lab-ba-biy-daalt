@@ -1,6 +1,6 @@
 package Composition;
 
-public class Main {
+public class main {
 	public static void main(String[] args) {
 		Computer pc = new Computer();
 		pc.showInfo();
